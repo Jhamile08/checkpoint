@@ -20,6 +20,8 @@ en:
     back_to_publication: "Back to Publications"
     show: "Publication Details"
     destroy: "Delete Publication"
+    successfully_destroyed: "the publication was destoyed."
+    successfully_update: "the publication was update"
   date:
     formats:
       long: "%d of %B, %Y"

@@ -20,6 +20,8 @@ es:
     back_to_publication: "Volver a publicaciones"
     show: "Detalles de la publicación"
     destroy: "Eliminar publicación"
+    successfully_destroyed: "La publicación fue eliminada con éxito."
+    successfully_update: "La publicación fue actualizada con éxito."
   date:
     formats:
       long: "%d de %B de %Y"

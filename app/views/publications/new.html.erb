@@ -1,13 +1,11 @@
-<% content_for :title, t('publications.new')%>
+<% content_for :title, t('publications.new') %>
 
-<h1><%= t('publications.new')%></h1>
+<h1 class="text-3xl font-bold text-center text-blue-600 mb-6"><%= t('publications.new') %></h1>
 
-  <%= t('activerecord.errors.models.publication.attributes.category.inclusion') %>
 <%= render "form", publication: @publication %>
 
 <br>
 
-<div>
-  <%= link_to t('publications.back_to_publication'), publications_path %>
-
+<div class="text-center mt-4">
+  <%= link_to t('publications.back_to_publication'), publications_path, class: "text-blue-500 hover:text-blue-700 font-semibold" %>
 </div>

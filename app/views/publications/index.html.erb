@@ -1,20 +1,30 @@
-<p style="color: green"><%= notice %></p>
-
+<p class="text-green-500 text-center"><%= notice %></p>
+<div style="display: flex; flex-direction: column;">
 <% content_for :title, t('publications.title') %>
 
-<h1><%= t('publications.title') %></h1>
 
-<div id="publications">
+<h1 class="text-3xl font-bold text-center my-6"><%= t('publications.title') %></h1>
+
+<div id="publications" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<%= link_to t('publications.new'), new_publication_path, class: " bg-white text-blue-600 px-6 py-2  border-blue-600 " %>
   <% @publications.each do |publication| %>
-    <!-- Renderiza un partial si existe, o usa HTML directo -->
-    <div>
-      <h2><%= publication.title %></h2>
-      <p><%= publication.description %></p>
+    <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <h2 class="text-2xl font-semibold text-gray-800"><%= publication.title %></h2>
+      <p class="mt-2 text-gray-600"><%= publication.description %></p>
+      
+      <p class="text-sm text-gray-600 mt-2">
+        <strong><%= t('activerecord.attributes.publication.image') %>:</strong>
+        <% if publication.image.attached? %>
+          <%= image_tag(publication.image, alt: publication.title, class: "w-32 h-32 object-cover rounded-lg mt-2") %>
+        <% else %>
+          <em>No image available</em>
+        <% end %>
+      </p>
+      
+      <div class="mt-4">
+        <%= link_to t('publications.show'), publication_path(publication), class: "inline-block bg-white text-blue-600 px-6 py-2 border border-blue-600 rounded-lg hover:bg-blue-100 transition-colors" %>
+      </div>
     </div>
-    <p>
-      <%= link_to t('publications.show'), publication_path(publication) %>
-    </p>
   <% end %>
 </div>
-
-<%= link_to t('publications.new'), new_publication_path %>
+</div>

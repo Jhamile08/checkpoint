@@ -1,5 +1,5 @@
 <p style="color: green"><%= notice %></p>
-
+<div style="display: flex flex-direction: column;">
 <%= render @publication %>
 
 <div>
@@ -7,4 +7,6 @@
   <%= link_to t('publications.back_to_publication'), publications_path %>
 
   <%= button_to t('publications.destroy'), @publication, method: :delete %>
+</div>
+
 </div>
