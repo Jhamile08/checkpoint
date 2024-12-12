@@ -22,6 +22,7 @@ es:
     destroy: "Eliminar publicación"
     successfully_destroyed: "La publicación fue eliminada con éxito."
     successfully_update: "La publicación fue actualizada con éxito."
+    successfully_create: "La publicación fue creada con exito."
   date:
     formats:
       long: "%d de %B de %Y"

@@ -22,6 +22,7 @@ en:
     destroy: "Delete Publication"
     successfully_destroyed: "the publication was destoyed."
     successfully_update: "the publication was update"
+    successfully_create: "the publication was created"
   date:
     formats:
       long: "%d of %B, %Y"

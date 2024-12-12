@@ -25,7 +25,7 @@ class PublicationsController < ApplicationController
 
     respond_to do |format|
       if @publication.save
-        format.html { redirect_to @publication, notice: "Publication was successfully created." }
+        format.html { redirect_to @publication, notice: t("publications.successfully_create") }
         format.json { render :show, status: :created, location: @publication }
       else
         format.html { render :new, status: :unprocessable_entity }

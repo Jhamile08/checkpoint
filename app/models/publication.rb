@@ -3,7 +3,7 @@ class Publication < ApplicationRecord
 
   # Validations
   validates :title, presence: true, length: { minimum: 3, maximum: 100 }
-  validates :category, presence: true, inclusion: { in: %w[News Blog Article Research], message: "%{value} is not a valid category" }
+  validates :category, presence: true, length: { minimum: 3, maximum: 100 }
   validates :description, presence: true, length: { minimum: 10, maximum: 500 }
   # Image validation
   validate :image_format_and_size
