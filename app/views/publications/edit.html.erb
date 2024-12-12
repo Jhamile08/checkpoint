@@ -1,0 +1,12 @@
+<% content_for :title, <%= t('publications.edit') %>
+
+<h1><%= t('publications.edit')%></h1>
+
+<%= render "form", publication: @publication %>
+
+<br>
+
+<div>
+  <%= link_to t('publications.show'), @publication %> |
+  <%= link_to t('publications.back_to_publication'), publications_path %>
+</div>

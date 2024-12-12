@@ -1,0 +1,25 @@
+<div id="<%= dom_id publication %>">
+  <p>
+    <strong><%= t('activerecord.attributes.publication.title') %></strong>
+    <%= publication.title %>
+  </p>
+
+  <p>
+    <strong><%= t('activerecord.attributes.publication.category') %></strong>
+    <%= publication.category %>
+  </p>
+
+  <p>
+    <strong><%= t('activerecord.attributes.publication.publication') %></strong>
+    <%= publication.description %>
+  </p>
+  <p>
+    <strong><%= t('activerecord.attributes.publication.image') %></strong>
+    <% if publication.image.attached? %>
+      <%= image_tag(publication.image, alt: publication.title) %>
+    <% else %>
+      <em>No image available</em>
+    <% end %>
+  </p>
+
+</div>

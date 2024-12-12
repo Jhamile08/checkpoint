@@ -1,0 +1,13 @@
+<% content_for :title, t('publications.new')%>
+
+<h1><%= t('publications.new')%></h1>
+
+  <%= t('activerecord.errors.models.publication.attributes.category.inclusion') %>
+<%= render "form", publication: @publication %>
+
+<br>
+
+<div>
+  <%= link_to t('publications.back_to_publication'), publications_path %>
+
+</div>

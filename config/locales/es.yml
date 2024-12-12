@@ -1,0 +1,46 @@
+es:
+  activerecord:
+    models:
+      publication: "Publicación"
+    attributes:
+      publication:
+        title: "Título"
+        category: "Categoría"
+        description: "Descripción"
+        image: "Imagen"
+  helpers:
+    submit:
+      create: "Crear %{model}"
+      update: "Actualizar %{model}"
+  publications:
+    title: "Gestión de publicaciones"
+    index: "Lista de publicaciones"
+    new: "Crear publicación"
+    edit: "Editar publicación"
+    back_to_publication: "Volver a publicaciones"
+    show: "Detalles de la publicación"
+    destroy: "Eliminar publicación"
+  date:
+    formats:
+      long: "%d de %B de %Y"
+  errors:
+    models:
+      publication:
+        attributes:
+          title:
+            too_short: "El título debe tener al menos %{count} caracteres."
+            blank: "El título no puede estar vacío."
+          category:
+            blank: "La categoría no puede estar vacía."
+            inclusion: "La categoría no es válida."
+          description:
+            blank: "La descripción no puede estar vacía."
+            too_short: "La descripción debe tener al menos %{count} caracteres."
+          image:
+            blank: "La imagen no puede estar vacía."
+            content_type: "La imagen debe ser de tipo JPEG o JPG."
+    messages:
+      blank: "no puede estar vacío"
+      too_short: "es demasiado corto (mínimo %{count} caracteres)"
+      inclusion: "no es una opción válida"
+      content_type: "no es un tipo de archivo válido"

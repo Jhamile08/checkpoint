@@ -1,0 +1,46 @@
+en:
+  activerecord:
+    models:
+      publication: "Publication"
+    attributes:
+      publication:
+        title: "Title"
+        category: "Category"
+        description: "Description"
+        image: "Image"
+  helpers:
+    submit:
+      create: "Create %{model}"
+      update: "Update %{model}"
+  publications:
+    title: "Publication Management"
+    index: "List of Publications"
+    new: "Create Publication"
+    edit: "Edit Publication"
+    back_to_publication: "Back to Publications"
+    show: "Publication Details"
+    destroy: "Delete Publication"
+  date:
+    formats:
+      long: "%d of %B, %Y"
+  errors:
+    models:
+      publication:
+        attributes:
+          title:
+            too_short: "Title must have at least %{count} characters."
+            blank: "Title can't be blank."
+          category:
+            blank: "Category can't be blank."
+            inclusion: "Category is not valid."
+          description:
+            blank: "Description can't be blank."
+            too_short: "Description must have at least %{count} characters."
+          image:
+            blank: "Image can't be blank."
+            content_type: "Image must be of type JPEG or JPG."
+    messages:
+      blank: "can't be blank"
+      too_short: "is too short (minimum %{count} characters)"
+      inclusion: "is not a valid option"
+      content_type: "is not a valid file type"
